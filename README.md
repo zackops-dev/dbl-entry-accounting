@@ -6,7 +6,7 @@ The engine can be configured with a chart of accounts and rules that describe ho
 ```javascript
 const coa = [{ ... }, ... ]     // an array representing chart of accounts
 const rules = [{ ... }, ... ]   // an array of rules
-const process = accountingEngine({ coa, rules })
+const processTransaction = accountingEngine({ coa, rules })
 
 const someTransaction = {
   id: "2dc75475-d13c-4d10-a6bc-01b31a23be95",
@@ -16,7 +16,7 @@ const someTransaction = {
     ... // other entity fields here
   }
 }
-const entries = process(someTransaction)   // returns an array of entries
+const entries = processTransaction(someTransaction)   // returns an array of entries
 ```
 
 Resulting entries have the following structure:
