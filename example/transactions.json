@@ -1,0 +1,70 @@
+[
+  {
+    "id": "f345e665-fadf-494d-b091-1dc51141e809",
+    "trDate": "2024-01-07",
+    "entity": {
+      "type": "Purchase",
+      "description": "Flour from WindyMills",
+      "supplier": {
+        "id": "ced0ca3a-01e8-45d7-b5d3-7515cee56c33",
+        "name": "WindyMills LLC"
+      },
+      "total": "452.00"
+    }
+  },
+  {
+    "id": "801686b6-513d-422f-b65f-70326d8bfda4",
+    "trDate": "2024-01-08",
+    "entity": {
+      "type": "Purchase",
+      "description": "Eggs from Happy Farm",
+      "supplier": {
+        "id": "31ba8c45-b4db-4715-8d8b-219fd9711461",
+        "name": "Happy Farm Inc"
+      },
+      "total": "226.00"
+    }
+  },
+  {
+    "id": "2dc75475-d13c-4d10-a6bc-01b31a23be95",
+    "trDate": "2024-01-20",
+    "entity": {
+      "type": "Sale",
+      "product": {
+        "id": "4c34d0f0-4fbc-4956-bd0f-66cba4b6ffab",
+        "name": "Sourdough Bread"
+      },
+      "qty": 1,
+      "total": "6.59",
+      "tax": "0.86"
+    }
+  },
+  {
+    "id": "58baf4ab-e228-4f34-aed0-513388c277da",
+    "trDate": "2024-01-20",
+    "entity": {
+      "type": "Sale",
+      "product": {
+        "id": "612732e6-81e6-46d2-92bf-3fac91679601",
+        "name": "French Baquette"
+      },
+      "qty": 3,
+      "total": "14.97",
+      "tax": "1.95"
+    }
+  },
+  {
+    "id": "b371522a-bf05-4510-87cc-2b738134842a",
+    "trDate": "2024-01-20",
+    "entity": {
+      "type": "Sale",
+      "product": {
+        "id": "8cde7b52-18cf-4bad-be05-dae3ba4c7e9a",
+        "name": "Multigrain Loaf"
+      },
+      "qty": 1,
+      "total": "6.99",
+      "tax": "0.90"
+    }
+  }
+]

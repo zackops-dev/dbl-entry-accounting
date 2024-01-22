@@ -1,0 +1,17 @@
+[
+  {
+    "id": "4c34d0f0-4fbc-4956-bd0f-66cba4b6ffab",
+    "name": "Sourdough Bread",
+    "price": "6.59"
+  },
+  {
+    "id": "612732e6-81e6-46d2-92bf-3fac91679601",
+    "name": "French Baquette",
+    "price": "4.99"
+  },
+  {
+    "id": "8cde7b52-18cf-4bad-be05-dae3ba4c7e9a",
+    "name": "Multigrain Loaf",
+    "price": "6.99"
+  }
+]
