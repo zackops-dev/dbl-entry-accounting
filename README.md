@@ -4,7 +4,7 @@ The engine can be configured with a chart of accounts and rules that describe ho
 
 ### How to use:
 ```javascript
-const coa = [{ ... }, ... ]     // an array representing chart of accounts
+const coa = { ... }             // chart of accounts
 const rules = [{ ... }, ... ]   // an array of rules
 const processTransaction = accountingEngine({ coa, rules })
 
