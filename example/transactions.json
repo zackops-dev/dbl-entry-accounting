@@ -4,7 +4,7 @@
     "trDate": "2024-01-07",
     "entity": {
       "type": "Purchase",
-      "description": "Flour from WindyMills",
+      "description": "Purchase - Flour from WindyMills",
       "supplier": {
         "id": "ced0ca3a-01e8-45d7-b5d3-7515cee56c33",
         "name": "WindyMills LLC"
@@ -17,7 +17,7 @@
     "trDate": "2024-01-08",
     "entity": {
       "type": "Purchase",
-      "description": "Eggs from Happy Farm",
+      "description": "Purchase - Eggs from Happy Farm",
       "supplier": {
         "id": "31ba8c45-b4db-4715-8d8b-219fd9711461",
         "name": "Happy Farm Inc"
