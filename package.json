@@ -1,4 +1,7 @@
 {
   "name": "dbl-entry-accounting",
+"scripts": {
+  "dev": "yarn node index.js"
+}, 
   "packageManager": "yarn@3.4.1"
 }
