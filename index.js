@@ -2,7 +2,7 @@ const fs = require('fs');
 //////////////////////////////////////////////
 ///Synchronous
 const jsonString = fs.readFileSync('./example/transactions.json', 'utf-8');
-const data = JSON.parse(jsonString);
+const transactions = require("./example/transactions.json");
 let entryCount = 0;
 const ledger = [];
 
