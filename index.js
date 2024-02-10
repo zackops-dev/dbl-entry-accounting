@@ -40,7 +40,7 @@ function getLedger() {
       console.log('Error! transaction type not found');
     }
   }
-  return console.log(ledger);
+  return ledger;
 }
 
 getLedger();
