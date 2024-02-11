@@ -1,49 +1,60 @@
-const fs = require('fs');
 //////////////////////////////////////////////
 ///Synchronous
-const jsonString = fs.readFileSync('./example/transactions.json', 'utf-8');
-const data = JSON.parse(jsonString);
-let entryCount = 0;
-const ledger = [];
+// const fs = require('fs');
+// const jsonString = fs.readFileSync('./example/transactions.json', 'utf-8');
+//const data = JSON.parse(jsonString);
+const transactions = require('./example/transactions.json');
 
-function getLedger() {
-  for (let i = 0; i < data.length; i++) {
+function getLedger(transactionData) {
+  // transactionData
+  if (!transactionData || !Array.isArray(transactionData)) {
+    return;
+  }
+  let entryCount = 0;
+  const ledger = [];
+  for (let i = 0; i < transactionData.length; i++) {
     entryCount++;
 
-    if (data[i].entity.type === 'Purchase') {
+    if (transactionData[i]?.entity?.type === 'Purchase') {
       ledger.push({
         entryNo: entryCount,
-        description: data[i].entity.description,
+        description: transactionData[i].entity.description,
         debit: ' Expenses/Cost of Sales',
         credit: ' Liabilities/Accounts Payable',
         amount: data[i].entity.total,
       });
-    } else if (data[i].entity.type === 'Sale') {
+    } else if (transactionData[i].entity.type === 'Sale') {
       ledger.push({
         entryNo: entryCount,
-        description: data[i].entity.type + ' - ' + data[i].entity.product.name,
+        description:
+          transactionData[i].entity.type +
+          ' - ' +
+          transactionData[i].entity.product.name,
         debit: ' Assets/Accounts Receivable',
         credit: ' Revenue/Sales ',
-        amount: data[i].entity.total,
+        amount: transactionData[i].entity.total,
       });
 
       entryCount++;
 
       ledger.push({
         entryNo: entryCount,
-        description: data[i].entity.type + ' - ' + data[i].entity.product.name,
+        description:
+          transactionData[i].entity.type +
+          ' - ' +
+          transactionData[i].entity.product.name,
         debit: ' Assets/Accounts Receivable',
         credit: 'Liabilities/Taxes/GST',
-        amount: data[i].entity.tax,
+        amount: transactionData[i].entity.tax,
       });
     } else {
       console.log('Error! transaction type not found');
     }
   }
-  return console.log(ledger);
+  return ledger;
 }
 
-getLedger();
+console.log(getLedger(data));
 
 //////////////////////////////////////////////
 ///Asynchronous way - create the entries in reverse order in the ledger since while loop
