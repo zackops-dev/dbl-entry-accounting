@@ -21,7 +21,7 @@ function getLedger(transactionData) {
         description: transactionData[i].entity.description,
         debit: ' Expenses/Cost of Sales',
         credit: ' Liabilities/Accounts Payable',
-        amount: data[i].entity.total,
+        amount: transactionData[i].entity.total,
       });
     } else if (transactionData[i]?.entity?.type === 'Sale') {
       ledger.push({
@@ -54,7 +54,7 @@ function getLedger(transactionData) {
   return ledger;
 }
 
-console.log(getLedger(transactionData));
+console.log(getLedger(transactions));
 
 //////////////////////////////////////////////
 ///Asynchronous way - create the entries in reverse order in the ledger since while loop
